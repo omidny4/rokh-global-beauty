@@ -52,8 +52,8 @@ export default {
         softpink: "hsl(350 70% 85%)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Vazirmatn', 'system-ui', 'sans-serif'],
+        serif: ['Vazirmatn', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

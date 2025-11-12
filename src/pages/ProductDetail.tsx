@@ -22,7 +22,7 @@ const ProductDetail = () => {
             <div className="aspect-square rounded-3xl overflow-hidden bg-muted shadow-elegant">
               <img
                 src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80"
-                alt="Product"
+                alt="محصول"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -34,7 +34,7 @@ const ProductDetail = () => {
                 >
                   <img
                     src={`https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&q=80`}
-                    alt={`Thumbnail ${i}`}
+                    alt={`تصویر کوچک ${i}`}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -47,7 +47,7 @@ const ProductDetail = () => {
             <div>
               <p className="text-primary font-medium mb-2">The Ordinary</p>
               <h1 className="text-4xl font-serif font-bold mb-4">
-                Hyaluronic Acid 2% + B5 Serum
+                سرم هیالورونیک اسید ۲٪ + B5
               </h1>
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex items-center gap-1">
@@ -59,25 +59,25 @@ const ProductDetail = () => {
                   ))}
                 </div>
                 <span className="text-sm text-muted-foreground">
-                  (128 reviews)
+                  (۱۲۸ نظر)
                 </span>
               </div>
-              <Badge variant="outline" className="mb-4">🇨🇦 Made in Canada</Badge>
+              <Badge variant="outline" className="mb-4">🇨🇦 ساخت کانادا</Badge>
             </div>
 
             <Separator />
 
             <div>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-4xl font-bold">$24.99</span>
+                <span className="text-4xl font-bold">۲۴.۹۹$</span>
                 <span className="text-xl text-muted-foreground line-through">
-                  $29.99
+                  ۲۹.۹۹$
                 </span>
                 <Badge className="bg-primary text-primary-foreground">
-                  -17%
+                  ۱۷٪-
                 </Badge>
               </div>
-              <p className="text-sm text-muted-foreground">Tax included</p>
+              <p className="text-sm text-muted-foreground">شامل مالیات</p>
             </div>
 
             <Separator />
@@ -85,7 +85,7 @@ const ProductDetail = () => {
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium mb-2 block">
-                  Quantity
+                  تعداد
                 </label>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center border border-border rounded-lg">
@@ -106,15 +106,15 @@ const ProductDetail = () => {
                     </button>
                   </div>
                   <Badge variant="secondary" className="bg-green-100 text-green-800">
-                    In Stock
+                    موجود در انبار
                   </Badge>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <Button size="lg" className="flex-1 gradient-rosegold hover:opacity-90 transition-smooth">
-                  <ShoppingCart className="mr-2 h-5 w-5" />
-                  Add to Cart
+                  <ShoppingCart className="ml-2 h-5 w-5" />
+                  افزودن به سبد خرید
                 </Button>
                 <Button
                   size="lg"
@@ -136,18 +136,18 @@ const ProductDetail = () => {
               <div className="flex items-start gap-3">
                 <Truck className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-medium">Fast Shipping from Turkey</p>
+                  <p className="font-medium">ارسال سریع از ترکیه</p>
                   <p className="text-sm text-muted-foreground">
-                    Delivered in 1-2 weeks worldwide
+                    تحویل در ۱ تا ۲ هفته به سراسر جهان
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-medium">100% Authentic</p>
+                  <p className="font-medium">۱۰۰٪ اصل</p>
                   <p className="text-sm text-muted-foreground">
-                    Guaranteed genuine products
+                    تضمین اصالت محصولات
                   </p>
                 </div>
               </div>
@@ -159,37 +159,27 @@ const ProductDetail = () => {
         <div className="mt-20">
           <Tabs defaultValue="description" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="description">Description</TabsTrigger>
-              <TabsTrigger value="ingredients">Ingredients</TabsTrigger>
-              <TabsTrigger value="reviews">Reviews</TabsTrigger>
+              <TabsTrigger value="description">توضیحات</TabsTrigger>
+              <TabsTrigger value="ingredients">مواد تشکیل‌دهنده</TabsTrigger>
+              <TabsTrigger value="reviews">نظرات</TabsTrigger>
             </TabsList>
             <TabsContent value="description" className="space-y-4 mt-8">
-              <h3 className="text-2xl font-serif font-bold">Product Description</h3>
+              <h3 className="text-2xl font-serif font-bold">توضیحات محصول</h3>
               <p className="text-muted-foreground leading-relaxed">
-                A hydration support formula with ultra-pure, vegan hyaluronic acid. 
-                This formula combines low-, medium- and high-molecular weight hyaluronic 
-                acid molecules along with a next-generation HA crosspolymer at a combined 
-                concentration of 2% for multi-depth hydration. Pro-Vitamin B5 also enhances 
-                surface hydration.
+                یک فرمول پشتیبانی هیدراتاسیون با هیالورونیک اسید فوق‌العاده خالص و وگان. این فرمول ترکیبی از مولکول‌های هیالورونیک اسید با وزن مولکولی کم، متوسط و بالا را همراه با یک کراس‌پلیمر HA نسل بعدی در غلظت ترکیبی ۲٪ برای هیدراتاسیون چند عمقی ارائه می‌دهد.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                The Ordinary's Hyaluronic Acid 2% + B5 is a water-based serum that targets 
-                multiple layers of the skin to improve the appearance of skin smoothness. 
-                It can help retain water in the skin and leave skin feeling plump and healthy.
+                سرم هیالورونیک اسید ۲٪ + B5 اوردینری یک سرم پایه آبی است که چندین لایه پوست را هدف قرار می‌دهد تا ظاهر نرمی پوست را بهبود بخشد و می‌تواند به حفظ آب در پوست کمک کند.
               </p>
             </TabsContent>
             <TabsContent value="ingredients" className="space-y-4 mt-8">
-              <h3 className="text-2xl font-serif font-bold">Full Ingredients</h3>
+              <h3 className="text-2xl font-serif font-bold">مواد تشکیل‌دهنده کامل</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Aqua (Water), Sodium Hyaluronate, Pentylene Glycol, Propanediol, 
-                Sodium Hyaluronate Crosspolymer, Panthenol, Ahnfeltia Concinna Extract, 
-                Glycerin, Trisodium Ethylenediamine Disuccinate, Citric Acid, 
-                Isoceteth-20, Ethoxydiglycol, Ethylhexylglycerin, Hexylene Glycol, 
-                1,2-Hexanediol, Phenoxyethanol, Caprylyl Glycol.
+                آب، سدیم هیالورونات، پنتیلن گلایکول، پروپاندیول، کراس‌پلیمر سدیم هیالورونات، پانتنول، عصاره آنفلتیا کونسینا، گلیسیرین، تری‌سدیم اتیلن‌دی‌آمین دی‌سوکسینات، اسید سیتریک و سایر مواد.
               </p>
             </TabsContent>
             <TabsContent value="reviews" className="space-y-6 mt-8">
-              <h3 className="text-2xl font-serif font-bold">Customer Reviews</h3>
+              <h3 className="text-2xl font-serif font-bold">نظرات مشتریان</h3>
               {[1, 2, 3].map((i) => (
                 <div key={i} className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 mb-2">
@@ -197,11 +187,11 @@ const ProductDetail = () => {
                       <Star key={star} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="font-medium mb-1">Amazing product!</p>
+                  <p className="font-medium mb-1">محصول عالی!</p>
                   <p className="text-sm text-muted-foreground mb-2">
-                    My skin feels so hydrated and plump. Will definitely repurchase.
+                    پوست من خیلی مرطوب و شاداب شده. حتماً دوباره خریداری می‌کنم.
                   </p>
-                  <p className="text-xs text-muted-foreground">Sarah M. - 2 weeks ago</p>
+                  <p className="text-xs text-muted-foreground">سارا م. - ۲ هفته پیش</p>
                 </div>
               ))}
             </TabsContent>

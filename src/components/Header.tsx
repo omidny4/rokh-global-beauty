@@ -8,11 +8,11 @@ const Header = () => {
   const [cartCount] = useState(0);
 
   const navLinks = [
-    { name: "Makeup", href: "/products?category=makeup" },
-    { name: "Skincare", href: "/products?category=skincare" },
-    { name: "Haircare", href: "/products?category=haircare" },
-    { name: "Fragrances", href: "/products?category=fragrances" },
-    { name: "Special Offers", href: "/products?discount=true" },
+    { name: "آرایش", href: "/products?category=makeup" },
+    { name: "مراقبت از پوست", href: "/products?category=skincare" },
+    { name: "مراقبت از مو", href: "/products?category=haircare" },
+    { name: "عطر و ادکلن", href: "/products?category=fragrances" },
+    { name: "تخفیف‌ها", href: "/products?discount=true" },
   ];
 
   return (
@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <h1 className="text-3xl font-serif font-bold gradient-rosegold bg-clip-text text-transparent">
-              ROKH
+              رُخ
             </h1>
           </Link>
 
@@ -49,7 +49,7 @@ const Header = () => {
               <Button variant="ghost" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
+                  <span className="absolute -top-1 -left-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
                     {cartCount}
                   </span>
                 )}
@@ -90,23 +90,23 @@ const Header = () => {
       <div className="bg-secondary/30 border-b border-border py-2">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2 text-sm text-foreground">
           <Phone className="h-4 w-4" />
-          <span>Need help? WhatsApp us:</span>
+          <span>نیاز به راهنمایی دارید؟ واتساپ:</span>
           <a
             href="https://wa.me/989366069847"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-primary hover:underline"
           >
-            +98 936 606 9847
+            ۰۹۳۶ ۶۰۶ ۹۸۴۷
           </a>
-          <span>or</span>
+          <span>یا</span>
           <a
             href="https://wa.me/989961205805"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-primary hover:underline"
           >
-            +98 996 120 5805
+            ۰۹۹۶ ۱۲۰ ۵۸۰۵
           </a>
         </div>
       </div>

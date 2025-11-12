@@ -9,7 +9,7 @@ const Cart = () => {
   const cartItems = [
     {
       id: "1",
-      name: "Hyaluronic Acid Serum",
+      name: "سرم هیالورونیک اسید",
       brand: "The Ordinary",
       price: 24.99,
       quantity: 2,
@@ -17,7 +17,7 @@ const Cart = () => {
     },
     {
       id: "2",
-      name: "Snail Mucin Essence",
+      name: "اسانس موسین حلزون",
       brand: "COSRX",
       price: 18.99,
       quantity: 1,
@@ -34,7 +34,7 @@ const Cart = () => {
       <Header />
 
       <main className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-serif font-bold mb-12">Shopping Cart</h1>
+        <h1 className="text-4xl font-serif font-bold mb-12">سبد خرید</h1>
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Cart Items */}
@@ -73,7 +73,7 @@ const Cart = () => {
 
                       <div className="flex items-center gap-6">
                         <p className="text-xl font-bold">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          {(item.price * item.quantity).toFixed(2)}$
                         </p>
                         <button className="text-muted-foreground hover:text-destructive transition-smooth">
                           <Trash2 className="h-5 w-5" />
@@ -89,39 +89,39 @@ const Cart = () => {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-card rounded-2xl p-6 shadow-soft sticky top-24">
-              <h2 className="text-2xl font-serif font-bold mb-6">Order Summary</h2>
+              <h2 className="text-2xl font-serif font-bold mb-6">خلاصه سفارش</h2>
 
               <div className="space-y-4">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Subtotal</span>
-                  <span className="font-medium">${subtotal.toFixed(2)}</span>
+                  <span className="text-muted-foreground">جمع جزء</span>
+                  <span className="font-medium">{subtotal.toFixed(2)}$</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Shipping</span>
-                  <span className="font-medium">${shipping.toFixed(2)}</span>
+                  <span className="text-muted-foreground">هزینه ارسال</span>
+                  <span className="font-medium">{shipping.toFixed(2)}$</span>
                 </div>
 
                 <Separator />
 
                 <div className="flex justify-between text-lg">
-                  <span className="font-semibold">Total</span>
-                  <span className="font-bold">${total.toFixed(2)}</span>
+                  <span className="font-semibold">جمع کل</span>
+                  <span className="font-bold">{total.toFixed(2)}$</span>
                 </div>
               </div>
 
               <Button className="w-full mt-6 gradient-rosegold hover:opacity-90 transition-smooth" size="lg">
-                Proceed to Checkout
+                ادامه فرآیند خرید
               </Button>
 
               <Link to="/products">
                 <Button variant="outline" className="w-full mt-4" size="lg">
-                  Continue Shopping
+                  ادامه خرید
                 </Button>
               </Link>
 
               <div className="mt-6 p-4 bg-secondary/30 rounded-xl">
                 <p className="text-sm text-muted-foreground">
-                  🚚 Estimated delivery: 1-2 weeks from Turkey
+                  🚚 زمان تحویل تقریبی: ۱ تا ۲ هفته از ترکیه
                 </p>
               </div>
             </div>

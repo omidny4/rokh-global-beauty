@@ -9,66 +9,66 @@ const Products = () => {
   const products = [
     {
       id: "1",
-      name: "Hyaluronic Acid Serum",
+      name: "سرم هیالورونیک اسید",
       brand: "The Ordinary",
       price: 24.99,
       originalPrice: 29.99,
       image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80",
-      category: "Skincare",
+      category: "مراقبت از پوست",
       inStock: true,
-      origin: "🇨🇦 Canada",
+      origin: "🇨🇦 کانادا",
     },
     {
       id: "2",
-      name: "Sunset Eyeshadow Palette",
+      name: "پالت سایه چشم غروب",
       brand: "Huda Beauty",
       price: 65.0,
       image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&q=80",
-      category: "Makeup",
+      category: "آرایش",
       inStock: true,
-      origin: "🇺🇸 USA",
+      origin: "🇺🇸 آمریکا",
     },
     {
       id: "3",
-      name: "Snail Mucin Essence",
+      name: "اسانس موسین حلزون",
       brand: "COSRX",
       price: 18.99,
       originalPrice: 24.99,
       image: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&q=80",
-      category: "Skincare",
+      category: "مراقبت از پوست",
       inStock: true,
-      origin: "🇰🇷 Korea",
+      origin: "🇰🇷 کره",
     },
     {
       id: "4",
-      name: "Velvet Matte Lipstick",
+      name: "رژ لب مات مخملی",
       brand: "MAC",
       price: 19.0,
       image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&q=80",
-      category: "Makeup",
+      category: "آرایش",
       inStock: true,
-      origin: "🇺🇸 USA",
+      origin: "🇺🇸 آمریکا",
     },
     {
       id: "5",
-      name: "Moisturizing Hair Mask",
+      name: "ماسک مرطوب‌کننده مو",
       brand: "Olaplex",
       price: 28.0,
       image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&q=80",
-      category: "Haircare",
+      category: "مراقبت از مو",
       inStock: true,
-      origin: "🇺🇸 USA",
+      origin: "🇺🇸 آمریکا",
     },
     {
       id: "6",
-      name: "Floral Eau de Parfum",
+      name: "ادوپرفیوم گلی",
       brand: "Chanel",
       price: 135.0,
       originalPrice: 150.0,
       image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&q=80",
-      category: "Fragrances",
+      category: "عطر",
       inStock: true,
-      origin: "🇫🇷 France",
+      origin: "🇫🇷 فرانسه",
     },
   ];
 
@@ -79,9 +79,9 @@ const Products = () => {
       <main className="container mx-auto px-4 py-12">
         {/* Page Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-serif font-bold mb-4">All Products</h1>
+          <h1 className="text-4xl font-serif font-bold mb-4">تمام محصولات</h1>
           <p className="text-muted-foreground">
-            Discover our complete collection of authentic international beauty products
+            مجموعه کامل محصولات زیبایی اصل بین‌المللی را کشف کنید
           </p>
         </div>
 
@@ -89,20 +89,20 @@ const Products = () => {
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button variant="outline" className="gap-2">
             <SlidersHorizontal className="h-4 w-4" />
-            Filters
+            فیلترها
           </Button>
 
           <div className="flex-1" />
 
           <Select defaultValue="featured">
             <SelectTrigger className="w-full sm:w-[200px]">
-              <SelectValue placeholder="Sort by" />
+              <SelectValue placeholder="مرتب‌سازی بر اساس" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="featured">Featured</SelectItem>
-              <SelectItem value="price-low">Price: Low to High</SelectItem>
-              <SelectItem value="price-high">Price: High to Low</SelectItem>
-              <SelectItem value="newest">Newest</SelectItem>
+              <SelectItem value="featured">منتخب</SelectItem>
+              <SelectItem value="price-low">قیمت: کم به زیاد</SelectItem>
+              <SelectItem value="price-high">قیمت: زیاد به کم</SelectItem>
+              <SelectItem value="newest">جدیدترین</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -117,7 +117,7 @@ const Products = () => {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button variant="outline" size="lg">
-            Load More Products
+            نمایش محصولات بیشتر
           </Button>
         </div>
       </main>

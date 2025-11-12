@@ -42,15 +42,15 @@ const ProductCard = ({
           />
           
           {/* Badges */}
-          <div className="absolute top-4 left-4 flex flex-col gap-2">
+          <div className="absolute top-4 right-4 flex flex-col gap-2">
             {discount > 0 && (
               <Badge className="bg-primary text-primary-foreground">
-                -{discount}%
+                {discount}٪-
               </Badge>
             )}
             {!inStock && (
               <Badge variant="secondary" className="bg-muted text-muted-foreground">
-                Out of Stock
+                اتمام موجودی
               </Badge>
             )}
           </div>
@@ -61,7 +61,7 @@ const ProductCard = ({
               e.preventDefault();
               setIsFavorite(!isFavorite);
             }}
-            className="absolute top-4 right-4 p-2 rounded-full bg-card/80 backdrop-blur-sm hover:bg-card transition-smooth"
+            className="absolute top-4 left-4 p-2 rounded-full bg-card/80 backdrop-blur-sm hover:bg-card transition-smooth"
           >
             <Heart
               className={`h-5 w-5 ${
@@ -71,7 +71,7 @@ const ProductCard = ({
           </button>
 
           {/* Origin Badge */}
-          <div className="absolute bottom-4 left-4">
+          <div className="absolute bottom-4 right-4">
             <Badge variant="outline" className="bg-card/80 backdrop-blur-sm">
               {origin}
             </Badge>
@@ -94,11 +94,11 @@ const ProductCard = ({
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-bold text-foreground">
-              ${price.toFixed(2)}
+              {price.toFixed(2)}$
             </span>
             {originalPrice && (
               <span className="text-sm text-muted-foreground line-through">
-                ${originalPrice.toFixed(2)}
+                {originalPrice.toFixed(2)}$
               </span>
             )}
           </div>

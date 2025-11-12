@@ -12,38 +12,38 @@ const TrackOrder = () => {
 
   const trackingSteps = [
     {
-      status: "Preparing",
-      description: "Your order is being prepared",
+      status: "آماده‌سازی",
+      description: "سفارش شما در حال آماده‌سازی است",
       completed: true,
-      date: "Jan 15, 2024",
+      date: "۲۵ دی ۱۴۰۳",
       icon: Package,
     },
     {
-      status: "Shipped from Turkey",
-      description: "Package has left our warehouse in Turkey",
+      status: "ارسال از ترکیه",
+      description: "بسته از انبار ما در ترکیه خارج شده",
       completed: true,
-      date: "Jan 17, 2024",
+      date: "۲۷ دی ۱۴۰۳",
       icon: Truck,
     },
     {
-      status: "In Customs",
-      description: "Package is being processed at customs",
+      status: "در گمرک",
+      description: "بسته در حال بررسی در گمرک است",
       completed: true,
-      date: "Jan 20, 2024",
+      date: "۳۰ دی ۱۴۰۳",
       icon: MapPin,
     },
     {
-      status: "In Transit",
-      description: "On the way to your location",
+      status: "در حال انتقال",
+      description: "در مسیر به مقصد شما",
       completed: false,
-      date: "Expected Jan 25, 2024",
+      date: "تاریخ پیش‌بینی: ۵ بهمن",
       icon: Truck,
     },
     {
-      status: "Delivered",
-      description: "Package delivered to your address",
+      status: "تحویل داده شد",
+      description: "بسته به آدرس شما تحویل داده شد",
       completed: false,
-      date: "Expected Jan 28, 2024",
+      date: "تاریخ پیش‌بینی: ۸ بهمن",
       icon: CheckCircle2,
     },
   ];
@@ -60,16 +60,16 @@ const TrackOrder = () => {
 
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-serif font-bold mb-4 text-center">Track Your Order</h1>
+          <h1 className="text-4xl font-serif font-bold mb-4 text-center">پیگیری سفارش</h1>
           <p className="text-muted-foreground text-center mb-12">
-            Enter your tracking number to see the current status of your order
+            کد پیگیری خود را وارد کنید تا وضعیت فعلی سفارش را مشاهده کنید
           </p>
 
           {/* Tracking Input */}
           <div className="bg-card rounded-2xl p-8 shadow-soft mb-12">
             <div className="flex gap-4">
               <Input
-                placeholder="Enter tracking number (e.g., ROKH123456)"
+                placeholder="کد پیگیری را وارد کنید (مثال: ROKH123456)"
                 value={trackingNumber}
                 onChange={(e) => setTrackingNumber(e.target.value)}
                 className="flex-1"
@@ -78,26 +78,26 @@ const TrackOrder = () => {
                 onClick={handleTrack}
                 className="gradient-rosegold hover:opacity-90 transition-smooth"
               >
-                Track Order
+                پیگیری سفارش
               </Button>
             </div>
           </div>
 
-          {/* Tracking Status (shown after entering tracking number) */}
+          {/* Tracking Status */}
           {showTracking && (
             <div className="space-y-8">
               <div className="bg-card rounded-2xl p-8 shadow-soft">
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h2 className="text-2xl font-serif font-bold mb-2">
-                      Order #{trackingNumber || "ROKH123456"}
+                      سفارش #{trackingNumber || "ROKH123456"}
                     </h2>
                     <p className="text-muted-foreground">
-                      Estimated delivery: Jan 28, 2024
+                      تحویل تقریبی: ۸ بهمن ۱۴۰۳
                     </p>
                   </div>
                   <Badge className="bg-primary text-primary-foreground">
-                    In Transit
+                    در حال انتقال
                   </Badge>
                 </div>
 
@@ -109,7 +109,7 @@ const TrackOrder = () => {
                       <div key={index} className="relative flex gap-4">
                         {/* Line */}
                         {index < trackingSteps.length - 1 && (
-                          <div className="absolute left-5 top-12 bottom-0 w-0.5 bg-border" />
+                          <div className="absolute right-5 top-12 bottom-0 w-0.5 bg-border" />
                         )}
 
                         {/* Icon */}
@@ -145,9 +145,9 @@ const TrackOrder = () => {
 
               {/* Support Card */}
               <div className="bg-gradient-to-br from-secondary/30 to-accent/30 rounded-2xl p-8 text-center">
-                <h3 className="text-xl font-serif font-bold mb-4">Need Help?</h3>
+                <h3 className="text-xl font-serif font-bold mb-4">نیاز به کمک دارید؟</h3>
                 <p className="text-muted-foreground mb-6">
-                  Our support team is here to assist you with any questions about your order
+                  تیم پشتیبانی ما برای پاسخگویی به سوالات شما در مورد سفارش آماده است
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -156,7 +156,7 @@ const TrackOrder = () => {
                     rel="noopener noreferrer"
                   >
                     <Button variant="outline">
-                      WhatsApp: +98 936 606 9847
+                      واتساپ: ۰۹۳۶ ۶۰۶ ۹۸۴۷
                     </Button>
                   </a>
                   <a
@@ -165,7 +165,7 @@ const TrackOrder = () => {
                     rel="noopener noreferrer"
                   >
                     <Button variant="outline">
-                      WhatsApp: +98 996 120 5805
+                      واتساپ: ۰۹۹۶ ۱۲۰ ۵۸۰۵
                     </Button>
                   </a>
                 </div>

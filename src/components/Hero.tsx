@@ -11,26 +11,25 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-primary font-medium tracking-wide uppercase text-sm">
-                Authentic International Beauty
+                محصولات زیبایی اصل بین‌المللی
               </p>
               <h1 className="text-5xl lg:text-6xl font-serif font-bold leading-tight">
-                Discover Premium Beauty from Around the World
+                کشف محصولات زیبایی درجه یک از سراسر جهان
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Curated collection of authentic cosmetics and skincare from Europe, 
-                Korea, and USA. Shipped directly from Turkey to your door in 1-2 weeks.
+                مجموعه‌ای منتخب از لوازم آرایشی و بهداشتی اصل از برندهای معتبر اروپا، کره و آمریکا. ارسال مستقیم از ترکیه به در خانه شما در ۱ تا ۲ هفته.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/products">
                 <Button size="lg" className="gradient-rosegold shadow-elegant hover:opacity-90 transition-smooth">
-                  Shop Now
+                  خرید کنید
                 </Button>
               </Link>
               <Link to="/products?discount=true">
                 <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-secondary/50 transition-smooth">
-                  View Special Offers
+                  تخفیف‌های ویژه
                 </Button>
               </Link>
             </div>
@@ -38,16 +37,16 @@ const Hero = () => {
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-8 pt-8">
               <div>
-                <p className="text-2xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-muted-foreground">Authentic Products</p>
+                <p className="text-2xl font-bold text-foreground">۱۰۰٪</p>
+                <p className="text-sm text-muted-foreground">محصولات اصل</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-foreground">1-2 Weeks</p>
-                <p className="text-sm text-muted-foreground">Delivery Time</p>
+                <p className="text-2xl font-bold text-foreground">۱ تا ۲ هفته</p>
+                <p className="text-sm text-muted-foreground">زمان تحویل</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-foreground">Worldwide</p>
-                <p className="text-sm text-muted-foreground">Shipping</p>
+                <p className="text-2xl font-bold text-foreground">سراسر جهان</p>
+                <p className="text-sm text-muted-foreground">ارسال</p>
               </div>
             </div>
           </div>
@@ -57,15 +56,15 @@ const Hero = () => {
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elegant">
               <img
                 src={heroImage}
-                alt="Premium beauty products"
+                alt="محصولات زیبایی درجه یک"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-elegant">
-              <p className="text-sm text-muted-foreground mb-1">Shipped from</p>
+            <div className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-elegant">
+              <p className="text-sm text-muted-foreground mb-1">ارسال از</p>
               <p className="text-xl font-serif font-bold gradient-rosegold bg-clip-text text-transparent">
-                Turkey 🇹🇷
+                ترکیه 🇹🇷
               </p>
             </div>
           </div>

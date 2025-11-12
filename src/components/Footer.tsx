@@ -9,36 +9,35 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-serif font-bold gradient-rosegold bg-clip-text text-transparent mb-4">
-              ROKH
+              رُخ
             </h3>
             <p className="text-sm text-muted-foreground">
-              Authentic international beauty products from Europe, Korea, and USA, 
-              shipped directly from Turkey with love and care.
+              محصولات زیبایی اصل بین‌المللی از اروپا، کره و آمریکا که با عشق و دقت مستقیماً از ترکیه ارسال می‌شوند.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Shop</h4>
+            <h4 className="font-semibold mb-4">فروشگاه</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/products?category=makeup" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Makeup
+                  آرایش
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=skincare" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Skincare
+                  مراقبت از پوست
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=haircare" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Haircare
+                  مراقبت از مو
                 </Link>
               </li>
               <li>
                 <Link to="/products?discount=true" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Special Offers
+                  تخفیف‌های ویژه
                 </Link>
               </li>
             </ul>
@@ -46,26 +45,26 @@ const Footer = () => {
 
           {/* Customer Service */}
           <div>
-            <h4 className="font-semibold mb-4">Customer Service</h4>
+            <h4 className="font-semibold mb-4">خدمات مشتریان</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/track-order" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Track Order
+                  پیگیری سفارش
                 </Link>
               </li>
               <li>
                 <a href="https://wa.me/989366069847" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Contact Us
+                  تماس با ما
                 </a>
               </li>
               <li>
                 <Link to="/shipping" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Shipping Info
+                  اطلاعات ارسال
                 </Link>
               </li>
               <li>
                 <Link to="/returns" className="text-muted-foreground hover:text-primary transition-smooth">
-                  Returns
+                  بازگشت کالا
                 </Link>
               </li>
             </ul>
@@ -73,11 +72,11 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h4 className="font-semibold mb-4">ارتباط با ما</h4>
             <div className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Shipped from Turkey<br />
-                Delivery: 1-2 weeks worldwide
+                ارسال از ترکیه<br />
+                زمان تحویل: ۱ تا ۲ هفته
               </p>
               <div className="flex gap-4">
                 <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
@@ -95,7 +94,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 ROKH. All rights reserved. Authentic beauty, delivered with care.</p>
+          <p>© ۱۴۰۳ رُخ. تمامی حقوق محفوظ است. زیبایی اصیل، با دقت تحویل داده می‌شود.</p>
         </div>
       </div>
     </footer>
