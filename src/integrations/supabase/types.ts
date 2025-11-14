@@ -14,7 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      shipping_rates: {
+        Row: {
+          city: string | null
+          created_at: string | null
+          id: string
+          province: string
+          rate: number
+        }
+        Insert: {
+          city?: string | null
+          created_at?: string | null
+          id?: string
+          province: string
+          rate: number
+        }
+        Update: {
+          city?: string | null
+          created_at?: string | null
+          id?: string
+          province?: string
+          rate?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

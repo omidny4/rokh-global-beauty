@@ -4,8 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Trash2, Plus, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useShippingRates } from "@/hooks/useShippingRates";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Cart = () => {
+  const { data: shippingRates, isLoading: isLoadingRates } = useShippingRates();
+  const [selectedProvince, setSelectedProvince] = useState<string>("");
+  const [shippingCost, setShippingCost] = useState<number>(0);
+
   const cartItems = [
     {
       id: "1",
@@ -26,15 +39,32 @@ const Cart = () => {
   ];
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = 15.0;
-  const total = subtotal + shipping;
+  const total = subtotal + shippingCost;
+
+  const provinces = Array.from(
+    new Set(shippingRates?.map((rate) => rate.province) || [])
+  );
+
+  useEffect(() => {
+    if (selectedProvince && shippingRates) {
+      const rate = shippingRates.find((r) => r.province === selectedProvince);
+      if (rate) {
+        setShippingCost(rate.rate);
+      }
+    }
+  }, [selectedProvince, shippingRates]);
 
   const handleWhatsAppOrder = () => {
+    if (!selectedProvince) {
+      alert("لطفا استان خود را انتخاب کنید");
+      return;
+    }
+
     const orderDetails = cartItems.map(item => 
       `${item.name} (${item.brand}) - تعداد: ${item.quantity}`
     ).join('\n');
     
-    const message = `سلام، می‌خواهم این محصولات را سفارش دهم:\n\n${orderDetails}\n\nجمع کل: ${total.toFixed(2)}$`;
+    const message = `سلام، می‌خواهم این محصولات را سفارش دهم:\n\n${orderDetails}\n\nاستان: ${selectedProvince}\nهزینه ارسال: ${shippingCost.toLocaleString('fa-IR')} تومان\n\nجمع کل: ${total.toFixed(2)}$`;
     const whatsappNumber = "905526862929";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
@@ -108,9 +138,34 @@ const Cart = () => {
                   <span className="text-muted-foreground">جمع جزء</span>
                   <span className="font-medium">{subtotal.toFixed(2)}$</span>
                 </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">انتخاب استان</label>
+                  <Select value={selectedProvince} onValueChange={setSelectedProvince}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="استان خود را انتخاب کنید" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {isLoadingRates ? (
+                        <SelectItem value="loading" disabled>در حال بارگذاری...</SelectItem>
+                      ) : (
+                        provinces.map((province) => (
+                          <SelectItem key={province} value={province}>
+                            {province}
+                          </SelectItem>
+                        ))
+                      )}
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">هزینه ارسال</span>
-                  <span className="font-medium">{shipping.toFixed(2)}$</span>
+                  <span className="font-medium">
+                    {shippingCost > 0 
+                      ? `${shippingCost.toLocaleString('fa-IR')} تومان` 
+                      : "انتخاب کنید"}
+                  </span>
                 </div>
 
                 <Separator />
