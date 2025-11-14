@@ -29,6 +29,18 @@ const Cart = () => {
   const shipping = 15.0;
   const total = subtotal + shipping;
 
+  const handleWhatsAppOrder = () => {
+    const orderDetails = cartItems.map(item => 
+      `${item.name} (${item.brand}) - تعداد: ${item.quantity}`
+    ).join('\n');
+    
+    const message = `سلام، می‌خواهم این محصولات را سفارش دهم:\n\n${orderDetails}\n\nجمع کل: ${total.toFixed(2)}$`;
+    const whatsappNumber = "905526862929";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -109,8 +121,12 @@ const Cart = () => {
                 </div>
               </div>
 
-              <Button className="w-full mt-6 gradient-rosegold hover:opacity-90 transition-smooth" size="lg">
-                ادامه فرآیند خرید
+              <Button 
+                onClick={handleWhatsAppOrder}
+                className="w-full mt-6 gradient-rosegold hover:opacity-90 transition-smooth" 
+                size="lg"
+              >
+                ثبت سفارش از طریق واتساپ
               </Button>
 
               <Link to="/products">
